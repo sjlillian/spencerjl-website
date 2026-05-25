@@ -1,0 +1,40 @@
+.backLink {
+  display: inline-block;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+}
+
+.backLink:hover {
+  color: var(--accent-green-light);
+}
+
+.article {
+  max-width: 680px;
+}
+
+.header {
+  margin-bottom: 3rem;
+}
+
+.date {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.title {
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+.content {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+.content p {
+  margin-bottom: 1.5rem;
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "title": "AI Game Master",
+    "description": "An AI-powered narrative game system using Temporal workflows.",
+    "stack": ["Next.js", "Temporal", "OpenAI"],
+    "github": "#"
+  },
+  {
+    "title": "Systems Monitor",
+    "description": "A lightweight distributed telemetry dashboard.",
+    "stack": ["Go", "React", "WebSockets"],
+    "github": "#"
+  },
+  {
+    "title": "Minimalist Notes",
+    "description": "A markdown-first notebook built for speed and focus.",
+    "stack": ["Electron", "React", "SQLite"],
+    "github": "#"
+  }
+]
