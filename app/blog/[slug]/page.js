@@ -4,14 +4,15 @@ import Link from 'next/link';
 import styles from './slug.module.css';
 
 export async function generateStaticParams() {
-  const blogs = getBlogsData();
+  const blogs = await getBlogsData();
   return blogs.map((blog) => ({
     slug: blog.slug,
   }));
 }
 
-export function generateMetadata({ params }) {
-  const blog = getBlogBySlug(params.slug);
+export async function generateMetadata({ params }) {
+  const resolvedParams = await params;
+  const blog = await getBlogBySlug(resolvedParams.slug);
   if (!blog) return { title: 'Not Found' };
   
   return {
@@ -21,7 +22,8 @@ export function generateMetadata({ params }) {
 }
 
 export default async function BlogPost({ params }) {
-  const blog = await getBlogBySlug(params.slug);
+  const resolvedParams = await params;
+  const blog = await getBlogBySlug(resolvedParams.slug);
   
   if (!blog) {
     notFound();

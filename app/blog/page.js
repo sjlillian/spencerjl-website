@@ -7,8 +7,8 @@ export const metadata = {
   description: 'Thoughts on software development, systems, and design.',
 };
 
-export default function BlogPage() {
-  const blogs = getBlogsData();
+export default async function BlogPage() {
+  const blogs = await getBlogsData();
 
   return (
     <main className="container page-wrapper">

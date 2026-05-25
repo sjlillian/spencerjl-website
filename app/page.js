@@ -9,7 +9,8 @@ export default async function HomePage() {
   // Get top 2 projects for featured
   const featuredProjects = getProjectsData().slice(0, 2);
   // Get latest blog post
-  const latestBlog = getBlogsData()[0];
+  const blogs = await getBlogsData();
+  const latestBlog = blogs[0];
 
   return (
     <main className="container page-wrapper">
