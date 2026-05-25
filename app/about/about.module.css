@@ -14,22 +14,20 @@
   color: var(--text-secondary);
 }
 
-.sections {
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
+.content {
   max-width: 700px;
 }
 
-.sectionHeading {
+.content h2 {
   font-size: 1.8rem;
   color: var(--text-primary);
-  margin-bottom: 1rem;
+  margin-top: 4rem;
+  margin-bottom: 1.5rem;
   position: relative;
   display: inline-block;
 }
 
-.sectionHeading::after {
+.content h2::after {
   content: '';
   position: absolute;
   bottom: -4px;
@@ -39,8 +37,9 @@
   background-color: var(--accent-green-light);
 }
 
-.sectionContent {
+.content p {
   font-size: 1.1rem;
   line-height: 1.8;
   color: var(--text-secondary);
+  margin-bottom: 1.5rem;
 }

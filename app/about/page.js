@@ -6,8 +6,8 @@ export const metadata = {
   description: 'About Spencer, software developer and writer.',
 };
 
-export default function AboutPage() {
-  const about = getAboutData();
+export default async function AboutPage() {
+  const about = await getAboutData();
 
   return (
     <main className="container page-wrapper">
@@ -16,14 +16,10 @@ export default function AboutPage() {
         <p className={styles.intro}>{about.intro}</p>
       </header>
       
-      <div className={styles.sections}>
-        {about.sections.map((section, index) => (
-          <section key={index} className={styles.section}>
-            <h2 className={styles.sectionHeading}>{section.heading}</h2>
-            <p className={styles.sectionContent}>{section.content}</p>
-          </section>
-        ))}
-      </div>
+      <div 
+        className={styles.content}
+        dangerouslySetInnerHTML={{ __html: about.contentHtml }} 
+      />
     </main>
   );
 }

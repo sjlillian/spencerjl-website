@@ -4,8 +4,8 @@ import ProjectCard from '../components/ProjectCard';
 import BlogCard from '../components/BlogCard';
 import styles from './page.module.css';
 
-export default function HomePage() {
-  const about = getAboutData();
+export default async function HomePage() {
+  const about = await getAboutData();
   // Get top 2 projects for featured
   const featuredProjects = getProjectsData().slice(0, 2);
   // Get latest blog post

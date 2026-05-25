@@ -20,8 +20,8 @@ export function generateMetadata({ params }) {
   };
 }
 
-export default function BlogPost({ params }) {
-  const blog = getBlogBySlug(params.slug);
+export default async function BlogPost({ params }) {
+  const blog = await getBlogBySlug(params.slug);
   
   if (!blog) {
     notFound();
@@ -43,10 +43,10 @@ export default function BlogPost({ params }) {
           <h1 className={styles.title}>{blog.title}</h1>
         </header>
         
-        <div className={styles.content}>
-          <p><em>This is a placeholder for the blog content. Eventually, this could render Markdown or MDX based on the slug.</em></p>
-          <p>{blog.description}</p>
-        </div>
+        <div 
+          className={styles.content}
+          dangerouslySetInnerHTML={{ __html: blog.contentHtml }}
+        />
       </article>
     </main>
   );

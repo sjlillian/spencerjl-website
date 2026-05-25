@@ -1,0 +1,11 @@
+---
+name: "Spencer"
+title: "Software Developer, Writer, and Systems Thinker"
+intro: "I am a software engineer focused on building clean, intuitive, and highly functional digital experiences. With a deep interest in systems thinking and design, I strive to create tools that empower users."
+---
+
+## What I Build
+I specialize in modern web architecture, primarily working with React, Next.js, and complex state management systems. My projects often explore the intersection of clean design and resilient backend orchestrations.
+
+## Philosophy
+Technology should be invisible. The best software gets out of the way, allowing the user's intent to flow directly into action. I believe in minimalism not just as an aesthetic, but as a principle for writing maintainable and extensible code.
