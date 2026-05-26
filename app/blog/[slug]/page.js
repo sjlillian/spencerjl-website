@@ -29,11 +29,15 @@ export default async function BlogPost({ params }) {
     notFound();
   }
 
-  const formattedDate = new Date(blog.date).toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric'
-  });
+  const parsedDate = blog.date ? new Date(blog.date) : null;
+  const isValidDate = parsedDate && !isNaN(parsedDate.getTime());
+  const formattedDate = isValidDate
+    ? parsedDate.toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      })
+    : null;
 
   return (
     <main className="container page-wrapper">
@@ -41,7 +45,7 @@ export default async function BlogPost({ params }) {
       
       <article className={styles.article}>
         <header className={styles.header}>
-          <time className={styles.date}>{formattedDate}</time>
+          {formattedDate && <time className={styles.date}>{formattedDate}</time>}
           <h1 className={styles.title}>{blog.title}</h1>
         </header>
         
