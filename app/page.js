@@ -7,7 +7,7 @@ import styles from './page.module.css';
 export default async function HomePage() {
   const about = await getAboutData();
   // Get top 2 projects for featured
-  const featuredProjects = getProjectsData().slice(0, 2);
+  const featuredProjects = (await getProjectsData()).slice(0, 2);
   // Get latest blog post
   const blogs = await getBlogsData();
   const latestBlog = blogs[0];

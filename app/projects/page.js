@@ -7,8 +7,8 @@ export const metadata = {
   description: 'A collection of software development projects.',
 };
 
-export default function ProjectsPage() {
-  const projects = getProjectsData();
+export default async function ProjectsPage() {
+  const projects = await getProjectsData();
 
   return (
     <main className="container page-wrapper">
